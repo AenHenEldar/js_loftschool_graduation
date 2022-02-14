@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    font-size: 16px;
+    color: #000000;
+}
+* {
+    box-sizing: border-box;
+}
+
+.placemark {
+    overflow: scroll;
+    max-width: 353px;
+    width: 100%;
+    padding: 20px 0 7px 5px;
+}
+
+.placemark__title {
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.placemark__input {
+    margin-bottom: 10px;
+}
+.placemark__textarea {
+    height: 98px;
+    margin-bottom: 20px;
+}
+
+.input,
+.textarea {
+    display: block;
+    width: 100%;
+    padding: 11px;
+    font-size: 14px;
+    line-height: 16px;;
+}
+.input::placeholder,
+.textarea::placeholder {
+    color: #000000;
+}
+
+.input {
+    min-height: 38px;
+}
+
+.btn {
+    cursor: pointer;
+    min-height: 38px;
+    padding: 9px 16px;
+    color: #fff;
+    border: none;
+    background: #FF8663;
+    border-radius: 3px;
+}
+
+.placemark__review {
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #8F8F8F;
+}
+.placemark__review span {
+    color: #000000;
+}
+.placemark__review-container {
+    border-bottom: 1px solid #E7E7E7;
+}
