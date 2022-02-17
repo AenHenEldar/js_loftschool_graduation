@@ -11,6 +11,8 @@ Date.prototype.yyyymmdd = function () {
   ].join('');
 };
 
+const placemarks = []
+
 function init() {
   // Создание карты.
   const map = new ymaps.Map('map', {
@@ -18,14 +20,15 @@ function init() {
     // Порядок по умолчанию: «широта, долгота».
     // Чтобы не определять координаты центра карты вручную,
     // воспользуйтесь инструментом Определение координат.
-    center: [55.75, 37.6],
+    center: [55.75, 37.66],
     // Уровень масштабирования. Допустимые значения:
     // от 0 (весь мир) до 19.
     zoom: 13,
   });
 
   map.events.add('click', function (e) {
-    const placemark = new ymaps.Placemark(e.get('coords'), {
+    placemarks.push({
+      coords: e.get('coords'),
       hintContent: 'Оставить отзыв.',
       balloonContent: `
           <div class="placemark">
@@ -73,6 +76,13 @@ function init() {
         `,
     });
 
-    map.geoObjects.add(placemark);
+    placemarks.forEach(placemark => {
+      placemark = new ymaps.Placemark(placemark.coords, {
+        hintContent: placemark.hintContent,
+        balloonContent: placemark.balloonContent,
+      });
+
+      map.geoObjects.add(placemark);
+    })
   });
 }
