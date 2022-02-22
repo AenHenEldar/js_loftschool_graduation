@@ -1,0 +1,40 @@
+{
+  "name": "graduation",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    "watch": "webpack --mode development --watch",
+    "start": "webpack-dev-server --mode development --open"
+  },
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AenHenEldar/js_loftschool_graduation.git"
+  },
+  "keywords": [
+    "loftschool",
+    "graduation",
+    "js"
+  ],
+  "author": "Eldar <eldar.hidirow@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AenHenEldar/js_loftschool_graduation/issues"
+  },
+  "homepage": "https://github.com/AenHenEldar/js_loftschool_graduation#readme",
+  "devDependencies": {
+    "clean-webpack-plugin": "^4.0.0",
+    "css-loader": "^6.6.0",
+    "html-webpack-plugin": "^5.5.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.69.1",
+    "webpack-cli": "^4.9.2",
+    "webpack-dev-server": "^4.7.4"
+  },
+  "dependencies": {
+    "jquery": "^3.6.0"
+  }
+}
